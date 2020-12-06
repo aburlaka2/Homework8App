@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Homework8App.CardSystem.Interfaces;
-using Homework8App.CardSystem.Specific
+using Homework8App.CardSystem.Specific;
 
 namespace Homework8App.CardSystem.BankcomatAndTerminal
 {
@@ -40,6 +40,7 @@ namespace Homework8App.CardSystem.BankcomatAndTerminal
             Console.WriteLine("2 - Get Cash");
             Console.WriteLine("");
             Console.WriteLine("3 - Exit");
+            decimal ballance = CommonCard.Balance;
             bool choose = false;
             while (choose == false)
             {
@@ -49,14 +50,14 @@ namespace Homework8App.CardSystem.BankcomatAndTerminal
                 {
                     if (chooseOption == 1)
                     {
-                        Balance(UniversalCard.Balance);
+                        Balance(ballance);
                     }
-                    else if  (chooseOption == 2)
+                    else if (chooseOption == 2)
                     {
                         GetCash();
                     }
                     else if (chooseOption == 3)
-                        Console.WriteLine("You leave the bankomat")
+                        Console.WriteLine("You leave the bankomat");
                 }
             }
 
